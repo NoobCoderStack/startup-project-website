@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H2 Green Energy Hub | Start-Up Project SS2026</title>
+    <meta name="description"
+        content="A professional renewable energy and green hydrogen concept for commercial energy users, combining PV, wind, battery storage, hydrogen and smart energy management." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #071416;
+            --panel: #0d2024;
+            --panel-light: #123139;
+            --primary: #00e5a8;
+            --secondary: #60a5fa;
+            --accent: #facc15;
+            --text: #f8fafc;
+            --muted: #a7bdc5;
+            --white: #ffffff;
+            --danger: #fb7185;
+            --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+            --radius: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: radial-gradient(circle at top left, rgba(0, 229, 168, 0.16), transparent 32%),
+                radial-gradient(circle at top right, rgba(96, 165, 250, 0.16), transparent 28%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 20, 22, 0.82);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .logo-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: grid;
+            place-items: center;
+            color: #06211b;
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            color: var(--muted);
+            font-weight: 600;
+            font-size: 0.94rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            font-weight: 700;
+            transition: 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #73ffd8);
+            color: #05201a;
+            box-shadow: 0 14px 40px rgba(0, 229, 168, 0.26);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: rgba(255, 255, 255, 0.18);
+            color: var(--white);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 90px 0 70px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border: 1px solid rgba(0, 229, 168, 0.32);
+            border-radius: 999px;
+            background: rgba(0, 229, 168, 0.08);
+            color: #b8ffeb;
+            font-weight: 700;
+            font-size: 0.86rem;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 5.2rem);
+            line-height: 0.98;
+            letter-spacing: -0.07em;
+            margin-bottom: 24px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--muted);
+            max-width: 650px;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .metric-card {
+            padding: 20px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .metric-card strong {
+            display: block;
+            font-size: 1.55rem;
+            color: var(--primary);
+            letter-spacing: -0.04em;
+        }
+
+        .metric-card span {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 500px;
+            border-radius: var(--radius);
+            padding: 26px;
+            background: linear-gradient(145deg, rgba(18, 49, 57, 0.9), rgba(13, 32, 36, 0.72));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .hero-visual::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background: rgba(0, 229, 168, 0.18);
+            filter: blur(60px);
+            right: -80px;
+            top: -80px;
+            border-radius: 50%;
+        }
+
+        .system-map {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 16px;
+        }
+
+        .system-node {
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(7, 20, 22, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .node-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+
+        .node-value {
+            color: var(--accent);
+        }
+
+        .progress {
+            height: 9px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 100%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        section {
+            padding: 82px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 44px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.05;
+            letter-spacing: -0.055em;
+            margin-bottom: 14px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.055);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.16);
+        }
+
+        .icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, rgba(0, 229, 168, 0.18), rgba(96, 165, 250, 0.18));
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.03em;
+        }
+
+        .card p,
+        .card li {
+            color: var(--muted);
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .feature-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .feature {
+            display: flex;
+            gap: 14px;
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .check {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #05201a;
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 16px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 20px;
+            padding: 22px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.055);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+        }
+
+        .timeline-date {
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        .investor-box {
+            background: linear-gradient(135deg, rgba(0, 229, 168, 0.16), rgba(96, 165, 250, 0.16));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 32px;
+            padding: 46px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .investor-box h2 {
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            letter-spacing: -0.055em;
+            margin-bottom: 16px;
+        }
+
+        .investor-box p {
+            color: var(--muted);
+            max-width: 760px;
+            margin: 0 auto 28px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(7, 20, 22, 0.72);
+            color: var(--text);
+            outline: none;
+            font-family: inherit;
+        }
+
+        textarea {
+            grid-column: 1 / -1;
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        form button {
+            grid-column: 1 / -1;
+        }
+
+        footer {
+            padding: 34px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--muted);
+            text-align: center;
+        }
+
+        @media (max-width: 880px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid,
+            .split,
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                min-height: auto;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <a href="#home" class="logo">
+                <span class="logo-mark">H2</span>
+                <span>Green Energy Hub</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#solution">Solution</a>
+                <a href="#mission">Mission</a>
+                <a href="#technology">Technology</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#contact" class="btn btn-primary">Investor Inquiry</a>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <div class="badge">⚡ Start-Up Project SS2026 · Renewable Energy + Hydrogen</div>
+                    <h1>Turning commercial sites into <span class="gradient-text">clean energy hubs.</span></h1>
+                    <p>
+                        We design integrated energy systems for high-demand commercial locations using solar PV, wind
+                        energy,
+                        battery storage, green hydrogen production and smart energy management. The goal: reduce
+                        electricity cost,
+                        improve energy security and create new revenue from hydrogen and renewable power.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#solution" class="btn btn-primary">Explore the Concept</a>
+                        <a href="#technology" class="btn btn-outline">View System Design</a>
+                    </div>
+
+                    <div class="metrics">
+                        <div class="metric-card">
+                            <strong>24,000 m²+</strong>
+                            <span>Initial PV potential from roof and carport areas</span>
+                        </div>
+                        <div class="metric-card">
+                            <strong>3 GWh/a</strong>
+                            <span>Target self-consumption energy scale</span>
+                        </div>
+                        <div class="metric-card">
+                            <strong>H₂</strong>
+                            <span>Green hydrogen as storage and sales opportunity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Energy system dashboard visual">
+                    <div class="system-map">
+                        <div class="system-node">
+                            <div class="node-top"><span>Solar PV Generation</span><span class="node-value">High</span>
+                            </div>
+                            <div class="progress">
+                                <div class="bar" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="system-node">
+                            <div class="node-top"><span>Battery Flexibility</span><span
+                                    class="node-value">Optimized</span></div>
+                            <div class="progress">
+                                <div class="bar" style="width: 68%"></div>
+                            </div>
+                        </div>
+                        <div class="system-node">
+                            <div class="node-top"><span>Electrolyzer Utilization</span><span
+                                    class="node-value">Strategic</span></div>
+                            <div class="progress">
+                                <div class="bar" style="width: 57%"></div>
+                            </div>
+                        </div>
+                        <div class="system-node">
+                            <div class="node-top"><span>CO₂ Reduction Potential</span><span
+                                    class="node-value">Strong</span></div>
+                            <div class="progress">
+                                <div class="bar" style="width: 76%"></div>
+                            </div>
+                        </div>
+                        <div class="system-node">
+                            <div class="node-top"><span>Investor Readiness</span><span class="node-value">In
+                                    Progress</span></div>
+                            <div class="progress">
+                                <div class="bar" style="width: 72%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution">
+            <div class="container">
+                <div class="section-title">
+                    <h2>A scalable clean-energy solution for commercial energy users.</h2>
+                    <p>Our concept is built for locations such as shopping outlets, logistics parks, campuses and
+                        industrial sites that need reliable energy and want a credible decarbonization pathway.</p>
+                </div>
+
+                <div class="cards">
+                    <article class="card">
+                        <div class="icon">☀️</div>
+                        <h3>Renewable Power</h3>
+                        <p>Use available roof and carport areas for solar PV, supported by wind or PPA electricity where
+                            economically suitable.</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon">🔋</div>
+                        <h3>Storage & Flexibility</h3>
+                        <p>Battery storage helps shift renewable energy, reduce grid import peaks and increase
+                            self-consumption.</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon">💧</div>
+                        <h3>Green Hydrogen</h3>
+                        <p>Surplus renewable electricity can supply an electrolyzer to produce hydrogen for mobility,
+                            industry or offtake partners.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission">
+            <div class="container split">
+                <div class="section-title" style="text-align:left; margin:0;">
+                    <h2>Vision, mission and value proposition.</h2>
+                    <p>This section is written for both customers and investors: clear, commercial and technically
+                        credible.</p>
+                </div>
+
+                <div class="feature-list">
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>Vision</h3>
+                            <p>To become a practical clean-energy hub model that helps commercial sites reduce emissions
+                                while creating long-term economic value.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>Mission</h3>
+                            <p>To design technically feasible and financially attractive renewable energy systems
+                                combining PV, storage, hydrogen and smart operation.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>Customer Value</h3>
+                            <p>Lower exposure to electricity price volatility, stronger sustainability image and
+                                potential new revenue from hydrogen or grid services.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>Investor Value</h3>
+                            <p>A modular energy infrastructure concept with measurable KPIs: LCOE, LCOH, CAPEX, OPEX,
+                                CO₂ balance and payback potential.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Technology architecture</h2>
+                    <p>The project compares multiple scenarios, from minimum investment to a larger integrated
+                        renewable-hydrogen system.</p>
+                </div>
+
+                <div class="cards">
+                    <article class="card">
+                        <div class="icon">1</div>
+                        <h3>Scenario A · Minimal Investment</h3>
+                        <p>PV-focused concept using roof and nearby available space to maximize direct self-consumption
+                            and reduce electricity imports.</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon">2</div>
+                        <h3>Scenario B · Balanced System</h3>
+                        <p>PV plus battery storage to improve load matching, reduce peak import and create a more stable
+                            renewable supply profile.</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon">3</div>
+                        <h3>Scenario C · Hydrogen Hub</h3>
+                        <p>PV, wind/PPA, battery and electrolyzer integration to produce green hydrogen and open
+                            commercial offtake opportunities.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Project roadmap</h2>
+                    <p>A structured development process from technical modeling to investor-ready recommendation.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 1</div>
+                        <div>
+                            <h3>Energy demand and renewable potential</h3>
+                            <p>Analyze hourly electricity demand, solar PV yield, wind potential and site constraints.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 2</div>
+                        <div>
+                            <h3>System sizing and component selection</h3>
+                            <p>Define PV capacity, battery capacity, electrolyzer size, hydrogen storage and
+                                safety-relevant components.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 3</div>
+                        <div>
+                            <h3>Financial and CO₂ evaluation</h3>
+                            <p>Calculate LCOE, LCOH, CAPEX, OPEX, annual cost balance, CO₂ savings and sensitivity
+                                cases.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Phase 4</div>
+                        <div>
+                            <h3>Recommendation and pitch</h3>
+                            <p>Prepare a clear scenario recommendation, investor one-pager, business case and
+                                implementation plan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="investor-box">
+                    <h2>Interested in building the next clean-energy hub?</h2>
+                    <p>
+                        We are open to collaboration with commercial site owners, renewable energy partners, hydrogen
+                        offtakers,
+                        technology suppliers and investors who want to accelerate practical decarbonization.
+                    </p>
+
+                    <div class="hero-actions" style="justify-content:center;">
+                        <a href="mailto:mub1757@thi.de?subject=Investor Inquiry - H2 Green Energy Hub"
+                            class="btn btn-primary">Email the Team</a>
+                        <a href="#home" class="btn btn-outline">Back to Top</a>
+                    </div>
+
+                    <form onsubmit="sendMessage(event)">
+                        <input type="text" id="name" placeholder="Your name" required>
+                        <input type="email" id="email" placeholder="Your email" required>
+                        <textarea id="message"
+                            placeholder="Tell us about your company, investment interest or partnership idea"
+                            required></textarea>
+                        <button class="btn btn-primary" type="submit">Prepare Email Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 H2 Green Energy Hub · Start-Up Project SS2026 · Built for customers, partners and investors.</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const subject = encodeURIComponent('Partnership / Investor Inquiry - H2 Green Energy Hub');
+            const body = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            );
+
+            window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+
+</html>
