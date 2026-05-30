@@ -235,6 +235,12 @@
     h2 { font-size: clamp(2.05rem, 4.3vw, 4.05rem); margin-bottom: 16px; }
     h3 { font-size: 1.28rem; margin-bottom: 10px; }
     p { color: var(--muted); }
+    .card h2 {
+      font-size: clamp(1.65rem, 2.5vw, 2.55rem);
+      line-height: 1.08;
+      word-break: normal;
+      overflow-wrap: anywhere;
+    }
     .lead { font-size: 1.17rem; max-width: 720px; margin-bottom: 28px; }
 
     .gradient-text {
@@ -497,6 +503,109 @@
     .mini-stat strong { display: block; color: var(--green); font-size: 1.5rem; letter-spacing: -.05em; }
     .mini-stat span { color: var(--muted); font-size: .84rem; }
 
+    .europe-map {
+      position: absolute;
+      inset: 12px 12px 66px 12px;
+      width: calc(100% - 24px);
+      height: calc(100% - 78px);
+      opacity: .95;
+    }
+    .map-land {
+      fill: rgba(216,231,239,.18);
+      stroke: rgba(255,255,255,.35);
+      stroke-width: 1.4;
+      filter: drop-shadow(0 10px 26px rgba(0,0,0,.25));
+    }
+    html[data-theme="light"] .map-land {
+      fill: rgba(8,19,28,.08);
+      stroke: rgba(8,19,28,.23);
+    }
+    .map-sea-line {
+      fill: none;
+      stroke: rgba(36,242,182,.38);
+      stroke-width: 2;
+      stroke-dasharray: 8 10;
+      animation: mapDash 4s linear infinite;
+    }
+    @keyframes mapDash { to { stroke-dashoffset: -90; } }
+    .map-pipeline-path {
+      fill: none;
+      stroke: url(#pipelineGradient);
+      stroke-width: 5;
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 14px rgba(36,242,182,.55));
+      stroke-dasharray: 10 8;
+      animation: mapDash 2.2s linear infinite;
+    }
+    .map-visual {
+      min-height: 390px;
+      background:
+        radial-gradient(circle at 48% 45%, rgba(36,242,182,.22), transparent 32%),
+        radial-gradient(circle at 70% 30%, rgba(100,168,255,.18), transparent 28%),
+        linear-gradient(145deg, rgba(100,168,255,.08), rgba(36,242,182,.055));
+    }
+    .dot-de { left: 50%; top: 43%; }
+    .dot-nl { left: 41%; top: 41%; }
+    .dot-fr { left: 42%; top: 58%; }
+    .dot-es { left: 27%; top: 75%; }
+    .dot-dk { left: 52%; top: 25%; }
+    .dot-pl { left: 64%; top: 44%; }
+
+    .progress-comparison {
+      display: grid;
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    .comparison-label {
+      font-weight: 900;
+      color: var(--soft);
+      line-height: 1.15;
+    }
+    .comparison-track {
+      position: relative;
+      height: 54px;
+      border-radius: 999px;
+      background: rgba(216,231,239,.18);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      box-shadow: inset 0 0 20px rgba(0,0,0,.12);
+    }
+    html[data-theme="light"] .comparison-track { background: rgba(8,19,28,.08); }
+    .comparison-fill {
+      width: var(--w);
+      height: 100%;
+      min-width: 48px;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #073763, #007f75, var(--green));
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 20px;
+      color: #f8fafc;
+      font-weight: 900;
+      letter-spacing: .06em;
+      box-shadow: 0 0 26px rgba(36,242,182,.24);
+    }
+    .comparison-fill.tiny {
+      justify-content: center;
+      padding-right: 0;
+      font-size: .78rem;
+      letter-spacing: 0;
+    }
+    .comparison-note {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid var(--line);
+    }
+
     .impact-banner { margin-top: 22px; padding: 34px; border-radius: 32px; border: 1px solid rgba(36,242,182,.22); background: linear-gradient(135deg, rgba(36,242,182,.13), rgba(100,168,255,.11)); display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
     .impact-banner p { max-width: 760px; }
 
@@ -694,13 +803,13 @@
     <section id="business">
       <div class="container market-grid">
         <div class="card reveal"><div class="eyebrow" data-en="Business model" data-de="Geschäftsmodell">Business model</div><h2 data-en="Consulting now. SaaS later." data-de="Heute Beratung. Später SaaS.">Consulting now. SaaS later.</h2><p data-en="Perpetua starts with project-based feasibility studies and investor-ready reports. These projects create revenue, market trust and data for the software tool. Over time, the logic becomes a scalable SaaS platform for multiple sites and portfolios." data-de="Perpetua startet mit projektbasierten Machbarkeitsstudien und investorentauglichen Reports. Diese Projekte schaffen Umsatz, Marktreferenz und Daten für das Softwaretool. Langfristig wird die Logik zu einer skalierbaren SaaS-Plattform für mehrere Standorte und Portfolios.">Perpetua starts with project-based feasibility studies and investor-ready reports. These projects create revenue, market trust and data for the software tool. Over time, the logic becomes a scalable SaaS platform for multiple sites and portfolios.</p><div class="grid-2" style="margin-top:24px"><article class="card"><h3 data-en="Early revenue" data-de="Frühe Umsätze">Early revenue</h3><p data-en="Quick-check analysis, feasibility studies, investor reports and H₂ offtaker screening." data-de="Quick-Check, Machbarkeitsstudien, Investorenberichte und H₂-Offtaker-Screening.">Quick-check analysis, feasibility studies, investor reports and H₂ offtaker screening.</p></article><article class="card"><h3 data-en="Scalable revenue" data-de="Skalierbare Umsätze">Scalable revenue</h3><p data-en="Software license, SaaS per site or portfolio, monitoring and scenario updates." data-de="Softwarelizenz, SaaS pro Standort oder Portfolio, Monitoring und Szenario-Updates.">Software license, SaaS per site or portfolio, monitoring and scenario updates.</p></article></div></div>
-        <div class="card reveal"><div class="eyebrow" data-en="Target customers" data-de="Zielkunden">Target customers</div><h2 data-en="Built for B2B energy decisions." data-de="Gebaut für B2B-Energieentscheidungen.">Built for B2B energy decisions.</h2><p data-en="Perpetua serves organisations with high electricity demand, decarbonisation targets and complex investment decisions." data-de="Perpetua richtet sich an Organisationen mit hohem Strombedarf, Dekarbonisierungszielen und komplexen Investitionsentscheidungen.">Perpetua serves organisations with high electricity demand, decarbonisation targets and complex investment decisions.</p><div class="pill-list"><span class="pill">Shopping centers</span><span class="pill">Commercial real estate</span><span class="pill">Logistics parks</span><span class="pill">Industry</span><span class="pill">Stadtwerke</span><span class="pill">Project developers</span><span class="pill">Infrastructure investors</span><span class="pill">Hydrogen offtakers</span></div></div>
+        <div class="card reveal"><div class="eyebrow" data-en="Target customers" data-de="Zielkunden">Target customers</div><h2 data-en="B2B energy decisions." data-de="B2B-Energieentscheidungen.">B2B energy decisions.</h2><p data-en="Perpetua serves organisations with high electricity demand, decarbonisation targets and complex investment decisions." data-de="Perpetua richtet sich an Organisationen mit hohem Strombedarf, Dekarbonisierungszielen und komplexen Investitionsentscheidungen.">Perpetua serves organisations with high electricity demand, decarbonisation targets and complex investment decisions.</p><div class="pill-list"><span class="pill">Shopping centers</span><span class="pill">Commercial real estate</span><span class="pill">Logistics parks</span><span class="pill">Industry</span><span class="pill">Stadtwerke</span><span class="pill">Project developers</span><span class="pill">Infrastructure investors</span><span class="pill">Hydrogen offtakers</span></div></div>
       </div>
     </section>
 
     <section id="policy">
       <div class="container">
-        <div class="section-head reveal"><div class="eyebrow" data-en="Policy & Market Pull" data-de="Politik & Marktnachfrage">Policy & Market Pull</div><h2 data-en="Europe is creating demand for renewable hydrogen — the deployment gap is the opportunity." data-de="Europa schafft Nachfrage nach erneuerbarem Wasserstoff — die Umsetzungslücke ist die Chance.">Europe is creating demand for renewable hydrogen — the deployment gap is the opportunity.</h2><p data-en="Perpetua helps customers and investors translate regulation, infrastructure gaps and site-level renewable potential into a practical H₂ storage, fuel-cell backup and surplus offtake strategy." data-de="Perpetua hilft Kunden und Investoren, Regulierung, Infrastrukturlücken und standortspezifisches erneuerbares Potenzial in eine praktische Strategie für H₂-Speicherung, Brennstoffzellen-Backup und Überschussabnahme zu übersetzen.">Perpetua helps customers and investors translate regulation, infrastructure gaps and site-level renewable potential into a practical H₂ storage, fuel-cell backup and surplus offtake strategy.</p></div>
+        <div class="section-head reveal"><div class="eyebrow" data-en="Policy & Market Pull" data-de="Politik & Marktnachfrage">Policy & Market Pull</div><h2 data-en="Europe is creating demand for renewable hydrogen : the deployment gap is the opportunity." data-de="Europa schafft Nachfrage nach erneuerbarem Wasserstoff : die Umsetzungslücke ist die Chance.">Europe is creating demand for renewable hydrogen : the deployment gap is the opportunity.</h2><p data-en="Perpetua helps customers and investors translate regulation, infrastructure gaps and site-level renewable potential into a practical H₂ storage, fuel-cell backup and surplus offtake strategy." data-de="Perpetua hilft Kunden und Investoren, Regulierung, Infrastrukturlücken und standortspezifisches erneuerbares Potenzial in eine praktische Strategie für H₂-Speicherung, Brennstoffzellen-Backup und Überschussabnahme zu übersetzen.">Perpetua helps customers and investors translate regulation, infrastructure gaps and site-level renewable potential into a practical H₂ storage, fuel-cell backup and surplus offtake strategy.</p></div>
         <div class="policy-grid">
           <article class="card policy-card reveal"><span class="policy-tag">RED III</span><strong>42% → 60%</strong><h3 data-en="Industry RFNBO target" data-de="RFNBO-Ziel in der Industrie">Industry RFNBO target</h3><p data-en="By 2030, RFNBOs are expected to cover at least 42% of industrial hydrogen use, rising to 60% in 2035." data-de="Bis 2030 sollen RFNBOs mindestens 42% des industriellen Wasserstoffeinsatzes abdecken, bis 2035 steigt der Wert auf 60%.">By 2030, RFNBOs are expected to cover at least 42% of industrial hydrogen use, rising to 60% in 2035.</p></article>
           <article class="card policy-card reveal"><span class="policy-tag">ReFuelEU</span><strong>2025 → 2050</strong><h3 data-en="Aviation fuel transition" data-de="Transformation im Luftverkehr">Aviation fuel transition</h3><p data-en="SAF obligations start at 2% in 2025 and rise to 70% in 2050, with synthetic aviation fuel shares starting in 2030." data-de="SAF-Pflichten starten 2025 mit 2% und steigen bis 2050 auf 70%; synthetische Kraftstoffanteile beginnen ab 2030.">SAF obligations start at 2% in 2025 and rise to 70% in 2050, with synthetic aviation fuel shares starting in 2030.</p></article>
@@ -712,24 +821,43 @@
 
     <section id="gap">
       <div class="container">
-        <div class="section-head reveal"><div class="eyebrow" data-en="Map & Gap Analysis" data-de="Karte & Lückenanalyse">Map & Gap Analysis</div><h2 data-en="Europe has the targets. The missing piece is investable site-level execution." data-de="Europa hat die Ziele. Das fehlende Stück ist investierbare Umsetzung auf Standortebene.">Europe has the targets. The missing piece is investable site-level execution.</h2><p data-en="These visuals show why Perpetua matters: the policy targets are large, the current deployment is still small, and customers need practical tools to decide what to build." data-de="Diese Visuals zeigen, warum Perpetua relevant ist: Die politischen Ziele sind groß, der heutige Ausbau ist noch klein, und Kunden brauchen praktische Tools, um Investitionen zu entscheiden.">These visuals show why Perpetua matters: the policy targets are large, the current deployment is still small, and customers need practical tools to decide what to build.</p></div>
+        <div class="section-head reveal">
+          <div class="eyebrow" data-en="Map & Gap Analysis" data-de="Karte & Lückenanalyse">Map & Gap Analysis</div>
+          <h2 data-en="Europe has the targets. The missing piece is investable site-level execution." data-de="Europa hat die Ziele. Das fehlende Stück ist investierbare Umsetzung auf Standortebene.">Europe has the targets. The missing piece is investable site-level execution.</h2>
+          <p data-en="These visuals show why Perpetua matters: the policy targets are large, current deployment is still small, and customers need practical tools to decide what to build." data-de="Diese Visuals zeigen, warum Perpetua relevant ist: Die politischen Ziele sind groß, der heutige Ausbau ist noch klein, und Kunden brauchen praktische Tools, um Investitionen zu entscheiden.">These visuals show why Perpetua matters: the policy targets are large, current deployment is still small, and customers need practical tools to decide what to build.</p>
+        </div>
 
         <div class="market-grid">
           <div class="card map-card reveal">
-            <div class="eyebrow" data-en="Hydrogen infrastructure map" data-de="Wasserstoff-Infrastrukturkarte">Hydrogen infrastructure map</div>
-            <h2 data-en="A network is emerging — but local decision tools are still missing." data-de="Ein Netzwerk entsteht — aber lokale Entscheidungstools fehlen noch.">A network is emerging — but local decision tools are still missing.</h2>
+            <div class="eyebrow" data-en="Interactive hydrogen map" data-de="Interaktive Wasserstoffkarte">Interactive hydrogen map</div>
+            <h2 data-en="A network is emerging, but local decision tools are still missing." data-de="Ein Netzwerk entsteht, aber lokale Entscheidungstools fehlen noch.">A network is emerging, but local decision tools are still missing.</h2>
             <p data-en="Click the country markers to see why regional hydrogen corridors, industrial clusters and offtakers matter for site-level business cases." data-de="Klicke auf die Länderpunkte, um zu sehen, warum regionale Wasserstoffkorridore, Industriecluster und Abnehmer für Standort-Business-Cases wichtig sind.">Click the country markers to see why regional hydrogen corridors, industrial clusters and offtakers matter for site-level business cases.</p>
-            <div class="map-visual" aria-label="Stylised European hydrogen infrastructure map">
-              <div class="pipeline"></div>
+            <div class="map-visual" aria-label="Stylised interactive European hydrogen infrastructure map">
+              <svg class="europe-map" viewBox="0 0 720 430" role="img" aria-label="Stylised Europe map">
+                <defs>
+                  <linearGradient id="pipelineGradient" x1="0" x2="1" y1="0" y2="0">
+                    <stop offset="0%" stop-color="#64a8ff" />
+                    <stop offset="55%" stop-color="#24f2b6" />
+                    <stop offset="100%" stop-color="#facc15" />
+                  </linearGradient>
+                </defs>
+                <path class="map-land" d="M142 270 C112 235,126 188,166 170 C204 153,230 119,275 123 C314 127,336 102,380 119 C414 132,453 117,493 135 C533 154,559 190,575 223 C596 268,564 309,518 307 C488 305,462 327,423 321 C381 315,358 337,315 325 C278 315,254 283,220 292 C186 301,164 293,142 270 Z" />
+                <path class="map-land" d="M300 103 C286 72,305 43,339 37 C373 31,397 51,402 84 C381 92,353 98,326 113 C316 118,306 116,300 103 Z" />
+                <path class="map-land" d="M238 331 C265 334,283 358,274 386 C245 384,221 369,205 346 C211 337,224 331,238 331 Z" />
+                <path class="map-land" d="M585 135 C611 133,638 150,648 174 C628 186,600 181,581 161 C575 151,575 139,585 135 Z" />
+                <path class="map-sea-line" d="M120 260 C198 185,287 183,360 211 C438 242,506 236,590 185" />
+                <path class="map-pipeline-path" d="M194 246 C260 212,316 215,374 235 C435 256,489 250,555 217" />
+                <path class="map-pipeline-path" d="M282 310 C322 276,371 262,426 267 C475 272,505 292,541 318" />
+              </svg>
               <button class="map-dot dot-de" data-map-en="Germany: 10 GW electrolysis target by 2030 and strong industrial demand make it a key market for site-level H₂ optimisation." data-map-de="Deutschland: 10 GW Elektrolyseziel bis 2030 und starke industrielle Nachfrage machen es zu einem Schlüsselmarkt für Standort-H₂-Optimierung.">DE</button>
               <button class="map-dot dot-nl" data-map-en="Netherlands: port infrastructure and hydrogen corridors are relevant for future H₂ imports and offtake." data-map-de="Niederlande: Hafeninfrastruktur und Wasserstoffkorridore sind relevant für zukünftige H₂-Importe und Abnahme.">NL</button>
               <button class="map-dot dot-fr" data-map-en="France: industrial clusters and low-carbon power can support hydrogen deployment and offtake." data-map-de="Frankreich: Industriecluster und CO₂-armer Strom können Wasserstoffausbau und Abnahme unterstützen.">FR</button>
               <button class="map-dot dot-es" data-map-en="Spain: strong renewable resources create export-oriented hydrogen opportunities." data-map-de="Spanien: Starke erneuerbare Ressourcen schaffen exportorientierte Wasserstoffchancen.">ES</button>
               <button class="map-dot dot-dk" data-map-en="Denmark: wind resources and North Sea infrastructure strengthen renewable hydrogen potential." data-map-de="Dänemark: Windressourcen und Nordsee-Infrastruktur stärken das Potenzial für erneuerbaren Wasserstoff.">DK</button>
               <button class="map-dot dot-pl" data-map-en="Poland: industrial demand and transition needs can create future hydrogen demand centres." data-map-de="Polen: Industrielle Nachfrage und Transformationsbedarf können zukünftige Wasserstoff-Nachfragezentren schaffen.">PL</button>
-              <div class="map-caption" id="mapCaption" data-en="Illustrative map concept based on official EU hydrogen map categories: production plants, pipelines, refuelling stations, storage, demand and infrastructure projects." data-de="Illustratives Kartenkonzept basierend auf offiziellen EU-H₂-Kartenkategorien: Produktion, Pipelines, Tankstellen, Speicher, Nachfrage und Infrastrukturprojekte.">Illustrative map concept based on official EU hydrogen map categories: production plants, pipelines, refuelling stations, storage, demand and infrastructure projects.</div>
+              <div class="map-caption" id="mapCaption" data-en="Illustrative map based on official EU hydrogen map categories: production plants, pipelines, refuelling stations, storage, demand and infrastructure projects." data-de="Illustrative Karte basierend auf offiziellen EU-H₂-Kartenkategorien: Produktion, Pipelines, Tankstellen, Speicher, Nachfrage und Infrastrukturprojekte.">Illustrative map based on official EU hydrogen map categories: production plants, pipelines, refuelling stations, storage, demand and infrastructure projects.</div>
             </div>
-            <p class="source-note" data-en="Use the official European Hydrogen Observatory Geomap / Hydrogen Infrastructure Map for real project locations before final submission." data-de="Nutze die offizielle European Hydrogen Observatory Geomap / Hydrogen Infrastructure Map für reale Projektstandorte vor der finalen Abgabe.">Use the official European Hydrogen Observatory Geomap / Hydrogen Infrastructure Map for real project locations before final submission.</p>
+            <p class="source-note" data-en="Use the official European Hydrogen Observatory Geomap and Hydrogen Infrastructure Map for verified project locations before final submission." data-de="Nutze die offizielle European Hydrogen Observatory Geomap und Hydrogen Infrastructure Map für verifizierte Projektstandorte vor der finalen Abgabe.">Use the official European Hydrogen Observatory Geomap and Hydrogen Infrastructure Map for verified project locations before final submission.</p>
           </div>
 
           <div class="card reveal">
@@ -748,26 +876,27 @@
         <div class="gap-layout">
           <div class="card chart-card reveal">
             <div class="eyebrow" data-en="EU electrolysis gap" data-de="EU-Elektrolyse-Lücke">EU electrolysis gap</div>
-            <h2 data-en="0.6 GW today vs. 40 GW strategic benchmark." data-de="0,6 GW heute vs. 40 GW strategischer Benchmark.">0.6 GW today vs. 40 GW strategic benchmark.</h2>
-            <p data-en="The chart compares current operational electrolysis capacity with the EU hydrogen strategy benchmark for 2030. The gap highlights why bankable local projects matter." data-de="Das Diagramm vergleicht die heutige operative Elektrolysekapazität mit dem strategischen EU-Benchmark für 2030. Die Lücke zeigt, warum bankfähige lokale Projekte wichtig sind.">The chart compares current operational electrolysis capacity with the EU hydrogen strategy benchmark for 2030. The gap highlights why bankable local projects matter.</p>
-            <div class="bar-chart">
-              <div class="bar-row"><div class="bar-meta"><span data-en="EU operational electrolysis, July 2025" data-de="EU operative Elektrolyse, Juli 2025">EU operational electrolysis, July 2025</span><span>0.6 GW</span></div><div class="bar-track"><div class="bar-fill danger" style="--w:1.5%"></div></div></div>
-              <div class="bar-row"><div class="bar-meta"><span data-en="EU under development / FID / construction" data-de="EU in Entwicklung / FID / Bau">EU under development / FID / construction</span><span>≈3 GW</span></div><div class="bar-track"><div class="bar-fill warning" style="--w:7.5%"></div></div></div>
-              <div class="bar-row"><div class="bar-meta"><span data-en="EU hydrogen strategy benchmark for 2030" data-de="EU-Wasserstoffstrategie-Benchmark für 2030">EU hydrogen strategy benchmark for 2030</span><span>40 GW</span></div><div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div></div>
+            <h2 data-en="Current deployment is only a small fraction of the 2030 benchmark." data-de="Der heutige Ausbau ist nur ein kleiner Bruchteil des 2030-Benchmarks.">Current deployment is only a small fraction of the 2030 benchmark.</h2>
+            <p data-en="The progress bars compare current and near-term EU electrolysis capacity with the 40 GW strategic benchmark for 2030." data-de="Die Fortschrittsbalken vergleichen aktuelle und kurzfristige EU-Elektrolysekapazität mit dem strategischen 40-GW-Benchmark für 2030.">The progress bars compare current and near-term EU electrolysis capacity with the 40 GW strategic benchmark for 2030.</p>
+            <div class="progress-comparison">
+              <div class="comparison-row"><div class="comparison-label" data-en="Status quo 2025" data-de="Status quo 2025">Status quo 2025</div><div class="comparison-track"><div class="comparison-fill tiny" style="--w:1.5%">1.5%</div></div></div>
+              <div class="comparison-row"><div class="comparison-label" data-en="Under development" data-de="In Entwicklung">Under development</div><div class="comparison-track"><div class="comparison-fill tiny" style="--w:7.5%">7.5%</div></div></div>
+              <div class="comparison-row"><div class="comparison-label" data-en="2030 benchmark" data-de="2030-Benchmark">2030 benchmark</div><div class="comparison-track"><div class="comparison-fill" style="--w:100%">40 GW</div></div></div>
             </div>
-            <div class="gap-number"><div class="mini-stat"><strong>39.4 GW</strong><span data-en="gap vs operational" data-de="Lücke ggü. operativ">gap vs operational</span></div><div class="mini-stat"><strong>1.5%</strong><span data-en="operational share of 40 GW" data-de="operativer Anteil von 40 GW">operational share of 40 GW</span></div><div class="mini-stat"><strong>2030</strong><span data-en="target horizon" data-de="Zielhorizont">target horizon</span></div></div>
+            <div class="gap-number"><div class="mini-stat"><strong>0.6 GW</strong><span data-en="operational EU capacity" data-de="operative EU-Kapazität">operational EU capacity</span></div><div class="mini-stat"><strong>≈3 GW</strong><span data-en="under development" data-de="in Entwicklung">under development</span></div><div class="mini-stat"><strong>39.4 GW</strong><span data-en="gap vs. 40 GW" data-de="Lücke ggü. 40 GW">gap vs. 40 GW</span></div></div>
           </div>
 
           <div class="card chart-card reveal">
             <div class="eyebrow" data-en="Germany and renewables gap" data-de="Deutschland- und Erneuerbaren-Lücke">Germany and renewables gap</div>
-            <h2 data-en="Germany needs site-level execution too." data-de="Auch Deutschland braucht Umsetzung auf Standortebene.">Germany needs site-level execution too.</h2>
-            <p data-en="Germany targets 10 GW of electrolyser capacity by 2030. At EU level, renewables were 25.2% of energy consumption in 2024 versus the 42.5% binding 2030 target." data-de="Deutschland zielt auf 10 GW Elektrolyseleistung bis 2030. Auf EU-Ebene lag der Erneuerbarenanteil 2024 bei 25,2% gegenüber dem verbindlichen 42,5%-Ziel für 2030.">Germany targets 10 GW of electrolyser capacity by 2030. At EU level, renewables were 25.2% of energy consumption in 2024 versus the 42.5% binding 2030 target.</p>
-            <div class="bar-chart">
-              <div class="bar-row"><div class="bar-meta"><span data-en="Germany 2030 electrolysis target" data-de="Deutschland Elektrolyseziel 2030">Germany 2030 electrolysis target</span><span>10 GW</span></div><div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div></div>
-              <div class="bar-row"><div class="bar-meta"><span data-en="EU renewables share in 2024" data-de="EU-Erneuerbarenanteil 2024">EU renewables share in 2024</span><span>25.2%</span></div><div class="bar-track"><div class="bar-fill warning" style="--w:59.3%"></div></div></div>
-              <div class="bar-row"><div class="bar-meta"><span data-en="EU binding renewables target 2030" data-de="EU verbindliches Erneuerbarenziel 2030">EU binding renewables target 2030</span><span>42.5%</span></div><div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div></div>
+            <h2 data-en="Germany also needs a steep scale-up." data-de="Auch Deutschland braucht einen steilen Hochlauf.">Germany also needs a steep scale-up.</h2>
+            <p data-en="Germany targets 10 GW electrolysis capacity by 2030. Current installed capacity remains far below that target, making bankable local projects important." data-de="Deutschland zielt auf 10 GW Elektrolyseleistung bis 2030. Die heutige installierte Kapazität liegt noch weit darunter, weshalb bankfähige lokale Projekte wichtig sind.">Germany targets 10 GW electrolysis capacity by 2030. Current installed capacity remains far below that target, making bankable local projects important.</p>
+            <div class="progress-comparison">
+              <div class="comparison-row"><div class="comparison-label" data-en="Germany status quo" data-de="Deutschland Status quo">Germany status quo</div><div class="comparison-track"><div class="comparison-fill tiny" style="--w:1.8%">1.8%</div></div></div>
+              <div class="comparison-row"><div class="comparison-label" data-en="Germany 2030 target" data-de="Deutschland Ziel 2030">Germany 2030 target</div><div class="comparison-track"><div class="comparison-fill" style="--w:100%">10 GW</div></div></div>
+              <div class="comparison-row"><div class="comparison-label" data-en="EU renewables 2024" data-de="EU Erneuerbare 2024">EU renewables 2024</div><div class="comparison-track"><div class="comparison-fill" style="--w:59.3%">25.2%</div></div></div>
+              <div class="comparison-row"><div class="comparison-label" data-en="EU target 2030" data-de="EU Ziel 2030">EU target 2030</div><div class="comparison-track"><div class="comparison-fill" style="--w:100%">42.5%</div></div></div>
             </div>
-            <div class="gap-number"><div class="mini-stat"><strong>10 GW</strong><span data-en="Germany 2030 electrolysis target" data-de="Deutschland Elektrolyseziel 2030">Germany 2030 electrolysis target</span></div><div class="mini-stat"><strong>95–130 TWh</strong><span data-en="Germany H₂ demand 2030" data-de="Deutschland H₂-Bedarf 2030">Germany H₂ demand 2030</span></div><div class="mini-stat"><strong>1,800 km</strong><span data-en="H₂ pipeline indicator" data-de="H₂-Pipeline-Indikator">H₂ pipeline indicator</span></div></div>
+            <div class="comparison-note"><p data-en="Germany status quo uses approximately 0.18 GW compared with the 10 GW 2030 target. Replace this value with your final chosen source if your report uses a different dataset." data-de="Deutschland Status quo nutzt ungefähr 0,18 GW im Vergleich zum 10-GW-Ziel für 2030. Ersetze diesen Wert durch deine finale Quelle, falls der Bericht einen anderen Datensatz nutzt.">Germany status quo uses approximately 0.18 GW compared with the 10 GW 2030 target. Replace this value with your final chosen source if your report uses a different dataset.</p></div>
           </div>
         </div>
 
@@ -793,14 +922,14 @@
           </div>
           <div class="card result-box reveal">
             <h3 data-en="Estimated quick-check output" data-de="Geschätzter Quick-Check-Output">Estimated quick-check output</h3>
-            <div class="result-item"><span data-en="Approx. PV capacity" data-de="Ca. PV-Leistung">Approx. PV capacity</span><b id="pvCap">—</b></div>
-            <div class="result-item"><span data-en="Approx. annual PV generation" data-de="Ca. jährliche PV-Erzeugung">Approx. annual PV generation</span><b id="pvGen">—</b></div>
-            <div class="result-item"><span data-en="Estimated useful self-consumed energy" data-de="Geschätzter nutzbarer Eigenverbrauch">Estimated useful self-consumed energy</span><b id="selfUse">—</b></div>
-            <div class="result-item"><span data-en="Estimated renewable surplus" data-de="Geschätzter erneuerbarer Überschuss">Estimated renewable surplus</span><b id="surplus">—</b></div>
-            <div class="result-item"><span data-en="Indicative self-consumption value" data-de="Indikativer Eigenverbrauchswert">Indicative self-consumption value</span><b id="value">—</b></div>
-            <div class="result-item"><span data-en="Estimated CO₂ savings from avoided grid electricity" data-de="Geschätzte CO₂-Einsparung durch vermiedenen Netzstrom">Estimated CO₂ savings from avoided grid electricity</span><b id="co2Saved">—</b></div>
-            <div class="result-item"><span data-en="Theoretical H₂ if all PV electricity is used" data-de="Theoretischer H₂, wenn gesamte PV-Erzeugung genutzt wird">Theoretical H₂ if all PV electricity is used</span><b id="h2All">—</b></div>
-            <div class="result-item"><span data-en="Potential H₂ from estimated surplus electricity" data-de="Potenzieller H₂ aus geschätztem Überschussstrom">Potential H₂ from estimated surplus electricity</span><b id="h2Surplus">—</b></div>
+            <div class="result-item"><span data-en="Approx. PV capacity" data-de="Ca. PV-Leistung">Approx. PV capacity</span><b id="pvCap">:</b></div>
+            <div class="result-item"><span data-en="Approx. annual PV generation" data-de="Ca. jährliche PV-Erzeugung">Approx. annual PV generation</span><b id="pvGen">:</b></div>
+            <div class="result-item"><span data-en="Estimated useful self-consumed energy" data-de="Geschätzter nutzbarer Eigenverbrauch">Estimated useful self-consumed energy</span><b id="selfUse">:</b></div>
+            <div class="result-item"><span data-en="Estimated renewable surplus" data-de="Geschätzter erneuerbarer Überschuss">Estimated renewable surplus</span><b id="surplus">:</b></div>
+            <div class="result-item"><span data-en="Indicative self-consumption value" data-de="Indikativer Eigenverbrauchswert">Indicative self-consumption value</span><b id="value">:</b></div>
+            <div class="result-item"><span data-en="Estimated CO₂ savings from avoided grid electricity" data-de="Geschätzte CO₂-Einsparung durch vermiedenen Netzstrom">Estimated CO₂ savings from avoided grid electricity</span><b id="co2Saved">:</b></div>
+            <div class="result-item"><span data-en="Theoretical H₂ if all PV electricity is used" data-de="Theoretischer H₂, wenn gesamte PV-Erzeugung genutzt wird">Theoretical H₂ if all PV electricity is used</span><b id="h2All">:</b></div>
+            <div class="result-item"><span data-en="Potential H₂ from estimated surplus electricity" data-de="Potenzieller H₂ aus geschätztem Überschussstrom">Potential H₂ from estimated surplus electricity</span><b id="h2Surplus">:</b></div>
             <div class="result-item"><span data-en="Suggested next step" data-de="Empfohlener nächster Schritt">Suggested next step</span><b id="nextStep">Run full scenario analysis</b></div>
             <div class="formula-box"><p data-en="Transparent formula assumptions:" data-de="Transparente Formelannahmen:">Transparent formula assumptions:</p><code id="formulaText">CO₂ saved = useful renewable kWh × grid CO₂ factor. H₂ kg = renewable kWh ÷ electrolyser kWh/kg H₂.</code><p class="source-note" data-en="Default CO₂ factor uses 0.344 kg CO₂/kWh as an editable German grid assumption. Default H₂ conversion uses 52 kWh/kg H₂ as an editable electrolyser assumption. Replace these with your final report values when available." data-de="Standard-CO₂-Faktor: 0,344 kg CO₂/kWh als editierbare Annahme für den deutschen Strommix. Standard-H₂-Umrechnung: 52 kWh/kg H₂ als editierbare Elektrolyseannahme. Ersetze diese Werte durch finale Berichtswerte, sobald verfügbar.">Default CO₂ factor uses 0.344 kg CO₂/kWh as an editable German grid assumption. Default H₂ conversion uses 52 kWh/kg H₂ as an editable electrolyser assumption. Replace these with your final report values when available.</p></div>
           </div>
