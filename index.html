@@ -917,4 +917,239 @@
     </section>
 
     <section id="team">
-      <div class="container grid-2"><div class="card reveal"><div class="eyebrow" data-i18n="team_eyebrow">Team structure</div><h2 data-i18n="team_title">Interdisciplinary by design.</h2><p data-i18n="team_text">The Perpetua project team consists of 13 students from Hydrogen Technology and Economy. The team combines technology, economics and digital implementation.</p></div><div class="card reveal"><div class="flow-list"><div class="flow-step"><span class="step-number">1</span><div><h3 data-i18n="team_1_title">Project leadership</h3><p data-i18n="team_1_text">Coordination, timeline, integration and final recommendation.</p></div></div><div class="flow-step"><span class="step-number">2</span><div><h3 data-i18n="team_2_title">Software / system architecture</h3><p data-i18n="team_2_text">Tool structure, optimization logic and digital workflow.</p></div></div><div class="flow-step"><span class="step-number">3</span><div><h3 data-i18n="team_3_title">Strategy, finance & marketing</h3><p
+      <div class="container grid-2"><div class="card reveal"><div class="eyebrow" data-i18n="team_eyebrow">Team structure</div><h2 data-i18n="team_title">Interdisciplinary by design.</h2><p data-i18n="team_text">The Perpetua project team consists of 13 students from Hydrogen Technology and Economy. The team combines technology, economics and digital implementation.</p></div><div class="card reveal"><div class="flow-list"><div class="flow-step"><span class="step-number">1</span><div><h3 data-i18n="team_1_title">Project leadership</h3><p data-i18n="team_1_text">Coordination, timeline, integration and final recommendation.</p></div></div><div class="flow-step"><span class="step-number">2</span><div><h3 data-i18n="team_2_title">Software / system architecture</h3><p data-i18n="team_2_text">Tool structure, optimization logic and digital workflow.</p></div></div><div class="flow-step"><span class="step-number">3</span><div><h3 data-i18n="team_3_title">Strategy, finance & marketing</h3><p data-i18n="team_3_text">Business model, market position, investor value and pitch narrative.</p></div></div><div class="flow-step"><span class="step-number">8</span><div><h3 data-i18n="team_4_title">Technical group</h3><p data-i18n="team_4_text">PV, storage, electrolysis, hydrogen pathways and site dimensioning.</p></div></div></div></div></div>
+    </section>
+
+    <section id="contact">
+      <div class="container"><div class="cta reveal"><h2 data-i18n="contact_title">Ready to turn your site into a clean-energy business case?</h2><p data-i18n="contact_text">Perpetua helps commercial and industrial customers move from uncertainty to a clear, comparable and investor-ready energy decision.</p><div class="hero-actions" style="justify-content:center"><a href="mailto:your.email@example.com?subject=Perpetua%20Investor%20or%20Customer%20Inquiry" class="btn btn-primary" data-i18n="contact_btn_1">Email Perpetua</a><a href="#calculator" class="btn btn-secondary" data-i18n="contact_btn_2">Start with quick check</a></div><form class="contact-form" onsubmit="prepareEmail(event)"><input id="name" type="text" placeholder="Your name" data-i18n-placeholder="form_name" required /><input id="email" type="email" placeholder="Your email" data-i18n-placeholder="form_email" required /><textarea id="message" placeholder="Tell us about your site, company, investment interest or partnership idea" data-i18n-placeholder="form_message" required></textarea><button class="btn btn-primary" type="submit" data-i18n="form_button">Prepare email message</button></form></div></div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p data-i18n="footer_text">© 2026 Perpetua · Clean Energy Decision Intelligence · Start-Up Project SS2026</p></div></footer>
+
+  <script>
+    const translations = {
+      en: {
+        nav_problem:"Problem", nav_solution:"Solution", nav_technology:"Technology", nav_business:"Business Model", nav_quickcheck:"Quick Check", nav_talk:"Talk to us",
+        hero_eyebrow:"Clean Energy Decision Intelligence · Start-Up Project SS2026", hero_title:'Transform renewable energy flows into <span class="gradient-text">investable decisions.</span>', hero_text:"Perpetua is a software-powered consulting and optimization solution for commercial and industrial energy users. We help customers decide when renewable electricity should be consumed directly, stored, converted into hydrogen or sold to the market.", hero_btn_1:"See the optimization logic", hero_btn_2:"Try the site quick check", trust_1_title:"Software + Consulting", trust_1_text:"Decision support before investment", trust_2_title:"PV · Battery · H₂", trust_2_text:"Integrated techno-economic analysis", trust_3_title:"Ingolstadt Village", trust_3_text:"Reference case for the master project", hero_live:"Live system logic", hero_live_right:"Click any component", core_title:"Perpetua Engine", core_text:"Best-use optimization logic",
+        node_pv:"Solar PV", node_pv_sub:"Generation", node_wind:"Wind / PPA", node_wind_sub:"Supply option", node_electrolyzer:"Electrolyzer", node_electrolyzer_sub:"Green H₂", node_battery:"Battery", node_battery_sub:"Flexibility", node_fuelcell:"Fuel Cell", node_fuelcell_sub:"Resilience", node_tank:"H₂ Tanks", node_tank_sub:"Storage / offtake", default_info_title:"Perpetua decision layer", default_info_badge:"Interactive", default_info_text:"Click a technology component to see how Perpetua evaluates it for commercial and industrial sites.",
+        problem_title:"The problem: clean energy decisions are becoming too complex.", problem_text:"Commercial and industrial sites are under pressure from energy costs, CO₂ targets and electricity market volatility. At the same time, technology options are expanding quickly.", problem_1_title:"Energy cost risk", problem_1_text:"High electricity demand turns energy purchasing into a strategic business risk, especially when spot markets are volatile and future prices are uncertain.", problem_2_title:"Regulatory pressure", problem_2_text:"Fit for 55, RED III, RFNBO rules and hydrogen strategies increase the pressure to prove credible decarbonization pathways.", problem_3_title:"Wrong use of surplus power", problem_3_text:"Renewable electricity should not automatically be exported. Without optimization, clean energy can be sold at weak prices or curtailed.",
+        solution_eyebrow:"Our solution", solution_title:"A digital decision layer between renewable power, storage, markets and hydrogen.", solution_text:"Perpetua combines software-based analysis with professional consulting. The tool processes site data, load profiles, generation profiles, market prices, storage options, hydrogen pathways and regulatory assumptions.", flow_1_title:"Use electricity directly", flow_1_text:"Renewable electricity first reduces grid import and creates immediate value at the site.", flow_1_tag:"Priority 1", flow_2_title:"Store surplus in batteries", flow_2_text:"Battery storage shifts energy into high-demand or high-value hours and reduces market exposure.", flow_2_tag:"Priority 2", flow_3_title:"Produce green hydrogen", flow_3_text:"Hydrogen is evaluated when surplus remains and offtake, storage and economics are plausible.", flow_3_tag:"Priority 3", flow_4_title:"Sell or structure a PPA", flow_4_text:"Only after internal value options are checked, Perpetua compares market sale or PPA alternatives.", flow_4_tag:"Market option",
+        platform_eyebrow:"Product vision", platform_title:"A decision cockpit for clean-energy investments.", platform_text:"The platform translates technical and market complexity into an intuitive investment workflow: upload site data, compare scenarios, identify the best use of renewable electricity and export a decision-ready report.", platform_pill_1:"Scenario builder", platform_pill_2:"Hourly optimization", platform_pill_3:"Investor reporting", platform_pill_4:"Portfolio scaling", dashboard_title:"Perpetua Optimization Dashboard", dash_1_title:"Direct use", dash_1_text:"Highest-value first priority", dash_2_title:"Battery dispatch", dash_2_text:"Flexibility and peak control", dash_3_title:"H₂ trigger", dash_3_text:"Activated after surplus check", dash_4_title:"PPA / Market", dash_4_text:"Alternative revenue route",
+        tech_title:"Technology portfolio evaluated by Perpetua.", tech_text:"The company does not sell hardware. It evaluates which combination of generation, storage, hydrogen and market strategy makes economic sense for a specific site.", tech_1_title:"Photovoltaics", tech_1_text:"Evaluates roof, carport or open-area PV potential, hourly yield, self-consumption and investment impact.", tech_2_title:"Wind / PPA", tech_2_text:"Compares complementary renewable profiles and possible PPA structures to improve clean energy availability.", tech_3_title:"Battery storage", tech_3_text:"Sizes storage for load matching, peak reduction, higher self-consumption and lower exposure to volatile prices.", tech_4_title:"Electrolyzer", tech_4_text:"Checks when H₂ production is profitable, what size is suitable and how LCOH changes under scenarios.", tech_5_title:"H₂ storage & offtake", tech_5_text:"Assesses tanks, offtaker logic, industrial use cases and bankability of hydrogen value paths.", tech_6_title:"Fuel cell / backup", tech_6_text:"Considers future flexibility options such as backup power, mobility supply or site energy resilience.",
+        software_title:"From data input to investor-ready output.", software_text:"Perpetua makes complex energy decisions transparent, comparable and bankable.", tab_input:"Data Input", tab_engine:"Optimization Engine", tab_output:"Customer Output", input_1_title:"Site profile", input_1_text:"Load profile, energy demand, available roof/carport areas, existing infrastructure and investment constraints.", input_2_title:"Energy profile", input_2_text:"PV and wind generation profiles, weather data, market prices and optional PPA assumptions.", input_3_title:"Regulatory assumptions", input_3_text:"EEG logic, PPA routes, RED III, RFNBO, subsidy options and CO₂ reduction goals.", engine_1_title:"Scenario analysis", engine_1_text:"Compares minimum-investment, balanced storage and hydrogen-hub scenarios.", engine_2_title:"Merit-order logic", engine_2_text:"Prioritizes direct use, battery storage, hydrogen production and market sale by financial and ecological value.", engine_3_title:"Financial model", engine_3_text:"Calculates CAPEX, OPEX, LCOE, LCOH, ROI, payback and sensitivities.", output_1_title:"Best-use strategy", output_1_text:"Clear recommendation on how each renewable kilowatt-hour should be used.", output_2_title:"Investment decision sheet", output_2_text:"Decision-ready summary for customers, banks, investors and internal stakeholders.", output_3_title:"Risk & CO₂ pathway", output_3_text:"Market-risk reduction, carbon impact and implementation roadmap.",
+        business_eyebrow:"Business model", business_title:"Consulting now. SaaS later.", business_text:"Perpetua starts with project-based feasibility studies and investor-ready reports. These projects create revenue, market trust and data for the software tool. Over time, the logic becomes a scalable SaaS platform for multiple sites and portfolios.", business_1_title:"Early revenue", business_1_text:"Quick-check analysis, feasibility study, investor report and H₂ offtaker screening.", business_2_title:"Scalable revenue", business_2_text:"Software license, SaaS per site or portfolio, ongoing optimization and optional success-based bonus.", customers_eyebrow:"Target customers", customers_title:"Built for B2B energy decisions.", customers_text:"Perpetua serves organizations with high electricity demand, decarbonization targets and complex investment decisions.", pill_1:"Shopping centers", pill_2:"Commercial real estate", pill_3:"Logistics parks", pill_4:"Industry", pill_5:"Stadtwerke", pill_6:"Project developers", pill_7:"Infrastructure investors", pill_8:"Hydrogen offtakers",
+        services_title:"Commercial offer structure.", services_text:"A clear product ladder makes Perpetua understandable for first customers while supporting the long-term transition into SaaS.", service_1_title:"Quick Check", service_1_price:"Entry analysis", service_1_text:"A fast first view of site potential and decision priorities.", service_1_li1:"PV area screening", service_1_li2:"Demand-fit estimate", service_1_li3:"Next-step recommendation", service_2_title:"Feasibility Study", service_2_price:"Project-based", service_2_text:"Detailed techno-economic scenario comparison for one site.", service_2_li1:"PV/battery/H₂ sizing", service_2_li2:"CAPEX/OPEX model", service_2_li3:"Sensitivity analysis", service_3_title:"Investor Report", service_3_price:"Bankability add-on", service_3_text:"Professional decision package for owners, banks or investors.", service_3_li1:"ROI/payback logic", service_3_li2:"Risk assessment", service_3_li3:"CO₂ pathway", service_4_title:"SaaS Optimizer", service_4_price:"Recurring model", service_4_text:"Portfolio-ready software modules for repeatable site evaluation.", service_4_li1:"Scenario updates", service_4_li2:"Portfolio comparison", service_4_li3:"Optimization dashboard",
+        market_eyebrow:"Why now?", market_title:"Market volatility and hydrogen policy create demand for smarter optimization.", market_text:"More renewable capacity means more clean electricity, but also more fluctuation, surplus and flexibility needs. Perpetua sits at this interface: renewable generation, batteries, electricity markets and hydrogen economics.", market_note:"Reference basis: project report sources such as IEA, EU RED III / REPowerEU, Germany's National Hydrogen Strategy and the Bavarian Hydrogen Strategy.", stat_1:"Global electricity demand growth in 2024 cited in the project report.", stat_2:"Additional renewable capacity 2025–2030 cited as global expansion signal.", stat_3:"EU renewable energy target for 2030 under RED III, with 45% ambition.", stat_4:"Germany's electrolysis target by 2030 in the updated hydrogen strategy.",
+        roadmap_title:"Strategic growth path.", roadmap_text:"The project develops from a site analysis into a software prototype, then into pilot validation and scalable commercial rollout.", phase_1:"Phase 1", phase_1_title:"Analysis", phase_1_text:"Build data basis: load profiles, generation profiles, market assumptions and first scenarios.", phase_2:"Phase 2", phase_2_title:"MVP", phase_2_text:"Create a software prototype with optimization logic and repeatable site evaluation.", phase_3:"Phase 3", phase_3_title:"Pilot case", phase_3_text:"Validate the approach using Ingolstadt Village as an illustrative reference case.", phase_4:"Phase 4", phase_4_title:"Market entry", phase_4_text:"Win first pilot customers through consulting, feasibility studies and partner networks.", phase_5:"Phase 5", phase_5_title:"SaaS scaling", phase_5_text:"Standardize analysis modules for multi-site customers and recurring software revenue.",
+        calc_title:"Interactive site potential quick check.", calc_text:"This simplified calculator is a lead-magnet style demo. It gives a rough first impression and encourages customers to request a real feasibility study.", calc_form_title:"Enter example site data", calc_label_area:"Available PV area in m²", calc_label_demand:"Annual electricity demand in MWh", calc_label_price:"Electricity price in €/kWh", calc_button:"Calculate rough potential", calc_results_title:"Estimated quick-check output", result_1:"Approx. PV capacity", result_2:"Approx. annual PV generation", result_3:"Indicative self-consumption value", result_5:"Theoretical H₂ potential from surplus", result_4:"Suggested next step", calc_note:"Assumption for demo only: 1 kWp per 5 m², 1,050 kWh/kWp annual yield, 70% direct/useful value before detailed hourly optimization and 47 kWh/kg H₂ for theoretical surplus conversion.",
+        team_eyebrow:"Team structure", team_title:"Interdisciplinary by design.", team_text:"The Perpetua project team consists of 13 students from Hydrogen Technology and Economy. The team combines technology, economics and digital implementation.", team_1_title:"Project leadership", team_1_text:"Coordination, timeline, integration and final recommendation.", team_2_title:"Software / system architecture", team_2_text:"Tool structure, optimization logic and digital workflow.", team_3_title:"Strategy, finance & marketing", team_3_text:"Business model, market position, investor value and pitch narrative.", team_4_title:"Technical group", team_4_text:"PV, storage, electrolysis, hydrogen pathways and site dimensioning.", contact_title:"Ready to turn your site into a clean-energy business case?", contact_text:"Perpetua helps commercial and industrial customers move from uncertainty to a clear, comparable and investor-ready energy decision.", contact_btn_1:"Email Perpetua", contact_btn_2:"Start with quick check", form_name:"Your name", form_email:"Your email", form_message:"Tell us about your site, company, investment interest or partnership idea", form_button:"Prepare email message", footer_text:"© 2026 Perpetua · Clean Energy Decision Intelligence · Start-Up Project SS2026"
+      },
+      de: {
+        nav_problem:"Problem", nav_solution:"Lösung", nav_technology:"Technologie", nav_business:"Geschäftsmodell", nav_quickcheck:"Quick-Check", nav_talk:"Kontakt aufnehmen",
+        hero_eyebrow:"Clean Energy Decision Intelligence · Start-up-Projekt SS2026", hero_title:'Erneuerbare Energieflüsse in <span class="gradient-text">investierbare Entscheidungen</span> verwandeln.', hero_text:"Perpetua ist eine softwaregestützte Beratungs- und Optimierungslösung für Gewerbe- und Industrieunternehmen. Wir helfen Kunden dabei zu entscheiden, wann erneuerbarer Strom direkt genutzt, gespeichert, in Wasserstoff umgewandelt oder am Markt verkauft werden sollte.", hero_btn_1:"Optimierungslogik ansehen", hero_btn_2:"Standort-Quick-Check testen", trust_1_title:"Software + Beratung", trust_1_text:"Entscheidungsunterstützung vor der Investition", trust_2_title:"PV · Batterie · H₂", trust_2_text:"Integrierte techno-ökonomische Analyse", trust_3_title:"Ingolstadt Village", trust_3_text:"Referenzfall des Masterprojekts", hero_live:"Live-Systemlogik", hero_live_right:"Komponente anklicken", core_title:"Perpetua Engine", core_text:"Best-Use-Optimierungslogik",
+        node_pv:"Solar-PV", node_pv_sub:"Erzeugung", node_wind:"Wind / PPA", node_wind_sub:"Versorgungsoption", node_electrolyzer:"Elektrolyseur", node_electrolyzer_sub:"Grüner H₂", node_battery:"Batterie", node_battery_sub:"Flexibilität", node_fuelcell:"Brennstoffzelle", node_fuelcell_sub:"Resilienz", node_tank:"H₂-Tanks", node_tank_sub:"Speicher / Offtake", default_info_title:"Perpetua Entscheidungsebene", default_info_badge:"Interaktiv", default_info_text:"Klicken Sie auf eine Technologiekomponente, um zu sehen, wie Perpetua diese für Gewerbe- und Industriestandorte bewertet.",
+        problem_title:"Das Problem: Clean-Energy-Entscheidungen werden immer komplexer.", problem_text:"Gewerbe- und Industriestandorte stehen unter Druck durch Energiekosten, CO₂-Ziele und volatile Strommärkte. Gleichzeitig wächst die Zahl technischer Optionen.", problem_1_title:"Energiekostenrisiko", problem_1_text:"Ein hoher Strombedarf macht Energiebeschaffung zu einem strategischen Geschäftsrisiko – besonders bei volatilen Spotmärkten und unsicheren Preisentwicklungen.", problem_2_title:"Regulatorischer Druck", problem_2_text:"Fit for 55, RED III, RFNBO-Regeln und Wasserstoffstrategien erhöhen den Druck, glaubwürdige Dekarbonisierungspfade nachzuweisen.", problem_3_title:"Falsche Nutzung von Überschussstrom", problem_3_text:"Erneuerbarer Strom sollte nicht automatisch eingespeist werden. Ohne Optimierung kann sauberer Strom zu ungünstigen Preisen verkauft oder abgeregelt werden.",
+        solution_eyebrow:"Unsere Lösung", solution_title:"Eine digitale Entscheidungsebene zwischen erneuerbarem Strom, Speicher, Markt und Wasserstoff.", solution_text:"Perpetua kombiniert softwaregestützte Analyse mit professioneller Beratung. Das Tool verarbeitet Standortdaten, Lastprofile, Erzeugungsprofile, Marktpreise, Speicheroptionen, Wasserstoffpfade und regulatorische Annahmen.", flow_1_title:"Strom direkt nutzen", flow_1_text:"Erneuerbarer Strom reduziert zunächst den Netzbezug und schafft unmittelbaren Wert am Standort.", flow_1_tag:"Priorität 1", flow_2_title:"Überschüsse in Batterien speichern", flow_2_text:"Batteriespeicher verschieben Energie in Stunden mit hoher Nachfrage oder höherem Wert und reduzieren Marktrisiken.", flow_2_tag:"Priorität 2", flow_3_title:"Grünen Wasserstoff produzieren", flow_3_text:"Wasserstoff wird bewertet, wenn weiterhin Überschüsse vorhanden sind und Abnahme, Speicherung und Wirtschaftlichkeit plausibel sind.", flow_3_tag:"Priorität 3", flow_4_title:"Verkaufen oder PPA strukturieren", flow_4_text:"Erst nachdem interne Wertoptionen geprüft wurden, vergleicht Perpetua Stromvermarktung und PPA-Alternativen.", flow_4_tag:"Marktoption",
+        platform_eyebrow:"Produktvision", platform_title:"Ein Entscheidungscockpit für Clean-Energy-Investitionen.", platform_text:"Die Plattform übersetzt technische und marktbezogene Komplexität in einen intuitiven Investitionsprozess: Standortdaten hochladen, Szenarien vergleichen, die beste Nutzung erneuerbaren Stroms identifizieren und einen entscheidungsreifen Report exportieren.", platform_pill_1:"Szenario-Builder", platform_pill_2:"Stündliche Optimierung", platform_pill_3:"Investorenreporting", platform_pill_4:"Portfolio-Skalierung", dashboard_title:"Perpetua Optimierungs-Dashboard", dash_1_title:"Direktnutzung", dash_1_text:"Höchste Wertpriorität", dash_2_title:"Batterie-Dispatch", dash_2_text:"Flexibilität und Peak-Kontrolle", dash_3_title:"H₂-Trigger", dash_3_text:"Aktiv nach Überschussprüfung", dash_4_title:"PPA / Markt", dash_4_text:"Alternative Erlösroute",
+        tech_title:"Von Perpetua bewertetes Technologieportfolio.", tech_text:"Das Unternehmen verkauft keine Hardware. Es bewertet, welche Kombination aus Erzeugung, Speicher, Wasserstoff und Vermarktungsstrategie für einen Standort wirtschaftlich sinnvoll ist.", tech_1_title:"Photovoltaik", tech_1_text:"Bewertet Dach-, Carport- oder Freiflächenpotenziale, stündliche Erträge, Eigenverbrauch und Investitionseffekte.", tech_2_title:"Wind / PPA", tech_2_text:"Vergleicht ergänzende erneuerbare Profile und mögliche PPA-Strukturen zur Verbesserung der Verfügbarkeit sauberer Energie.", tech_3_title:"Batteriespeicher", tech_3_text:"Dimensioniert Speicher für Lastanpassung, Peak-Shaving, höheren Eigenverbrauch und geringere Preisvolatilität.", tech_4_title:"Elektrolyseur", tech_4_text:"Prüft, wann H₂-Produktion wirtschaftlich ist, welche Größe sinnvoll ist und wie sich der LCOH in Szenarien verändert.", tech_5_title:"H₂-Speicher & Offtake", tech_5_text:"Bewertet Tanks, Offtaker-Logik, industrielle Anwendungsfälle und die Bankability von Wasserstoffpfaden.", tech_6_title:"Brennstoffzelle / Backup", tech_6_text:"Berücksichtigt zukünftige Flexibilitätsoptionen wie Backup-Strom, Mobilität oder Energie-Resilienz am Standort.",
+        software_title:"Von Dateninput zu investorenfähigem Output.", software_text:"Perpetua macht komplexe Energieentscheidungen transparent, vergleichbar und bankfähig.", tab_input:"Dateninput", tab_engine:"Optimierungs-Engine", tab_output:"Kundenoutput", input_1_title:"Standortprofil", input_1_text:"Lastprofil, Energiebedarf, verfügbare Dach-/Carportflächen, bestehende Infrastruktur und Investitionsgrenzen.", input_2_title:"Energieprofil", input_2_text:"PV- und Windprofile, Wetterdaten, Marktpreise und optionale PPA-Annahmen.", input_3_title:"Regulatorische Annahmen", input_3_text:"EEG-Logik, PPA-Wege, RED III, RFNBO, Fördermöglichkeiten und CO₂-Ziele.", engine_1_title:"Szenarioanalyse", engine_1_text:"Vergleicht Minimalinvestitions-, Speicher- und Wasserstoff-Hub-Szenarien.", engine_2_title:"Merit-Order-Logik", engine_2_text:"Priorisiert Direktnutzung, Batteriespeicherung, Wasserstoffproduktion und Marktverkauf nach finanziellem und ökologischem Wert.", engine_3_title:"Finanzmodell", engine_3_text:"Berechnet CAPEX, OPEX, LCOE, LCOH, ROI, Payback und Sensitivitäten.", output_1_title:"Best-Use-Strategie", output_1_text:"Klare Empfehlung, wie jede erneuerbare Kilowattstunde genutzt werden sollte.", output_2_title:"Investitionsentscheidung", output_2_text:"Entscheidungsreife Zusammenfassung für Kunden, Banken, Investoren und interne Stakeholder.", output_3_title:"Risiko- & CO₂-Pfad", output_3_text:"Marktrisikoreduktion, Klimawirkung und Umsetzungsfahrplan.",
+        business_eyebrow:"Geschäftsmodell", business_title:"Heute Beratung. Morgen SaaS.", business_text:"Perpetua startet mit projektbasierten Machbarkeitsstudien und investorenfähigen Reports. Diese Projekte schaffen Umsatz, Marktvertrauen und Daten für das Softwaretool. Langfristig wird daraus eine skalierbare SaaS-Plattform für mehrere Standorte und Portfolios.", business_1_title:"Frühe Erlöse", business_1_text:"Quick-Check-Analyse, Machbarkeitsstudie, Investorenreport und H₂-Offtaker-Screening.", business_2_title:"Skalierbare Erlöse", business_2_text:"Softwarelizenz, SaaS pro Standort oder Portfolio, laufende Optimierung und optional erfolgsbasierte Vergütung.", customers_eyebrow:"Zielkunden", customers_title:"Entwickelt für B2B-Energieentscheidungen.", customers_text:"Perpetua richtet sich an Organisationen mit hohem Strombedarf, Dekarbonisierungszielen und komplexen Investitionsentscheidungen.", pill_1:"Einkaufszentren", pill_2:"Gewerbeimmobilien", pill_3:"Logistikstandorte", pill_4:"Industrie", pill_5:"Stadtwerke", pill_6:"Projektentwickler", pill_7:"Infrastrukturinvestoren", pill_8:"Wasserstoff-Offtaker",
+        services_title:"Kommerzielle Angebotsstruktur.", services_text:"Eine klare Produktleiter macht Perpetua für erste Kunden verständlich und unterstützt gleichzeitig den langfristigen Übergang zu SaaS.", service_1_title:"Quick Check", service_1_price:"Einstiegsanalyse", service_1_text:"Ein schneller erster Blick auf Standortpotenzial und Entscheidungsprioritäten.", service_1_li1:"PV-Flächenscreening", service_1_li2:"Nachfrage-Fit-Schätzung", service_1_li3:"Empfohlener nächster Schritt", service_2_title:"Machbarkeitsstudie", service_2_price:"Projektbasiert", service_2_text:"Detaillierter techno-ökonomischer Szenariovergleich für einen Standort.", service_2_li1:"PV/Batterie/H₂-Auslegung", service_2_li2:"CAPEX/OPEX-Modell", service_2_li3:"Sensitivitätsanalyse", service_3_title:"Investorenreport", service_3_price:"Bankability-Add-on", service_3_text:"Professionelles Entscheidungspaket für Eigentümer, Banken oder Investoren.", service_3_li1:"ROI/Payback-Logik", service_3_li2:"Risikobewertung", service_3_li3:"CO₂-Pfad", service_4_title:"SaaS Optimizer", service_4_price:"Wiederkehrendes Modell", service_4_text:"Portfoliofähige Softwaremodule für wiederholbare Standortbewertung.", service_4_li1:"Szenario-Updates", service_4_li2:"Portfoliovergleich", service_4_li3:"Optimierungsdashboard",
+        market_eyebrow:"Warum jetzt?", market_title:"Marktvolatilität und Wasserstoffpolitik schaffen Bedarf für intelligentere Optimierung.", market_text:"Mehr erneuerbare Kapazität bedeutet mehr sauberen Strom, aber auch mehr Schwankungen, Überschüsse und Flexibilitätsbedarf. Genau an dieser Schnittstelle positioniert sich Perpetua: erneuerbare Erzeugung, Batteriespeicher, Strommarkt und Wasserstoffökonomie.", market_note:"Referenzbasis: Quellen des Projektberichts wie IEA, EU RED III / REPowerEU, Nationale Wasserstoffstrategie Deutschlands und Bayerische Wasserstoffstrategie.", stat_1:"Wachstum des globalen Strombedarfs 2024 laut Projektbericht.", stat_2:"Zusätzliche erneuerbare Kapazität 2025–2030 als globales Ausbausignal.", stat_3:"EU-Ziel für erneuerbare Energien bis 2030 unter RED III, mit 45 %-Ambition.", stat_4:"Deutsches Elektrolyseziel bis 2030 in der aktualisierten Wasserstoffstrategie.",
+        roadmap_title:"Strategischer Entwicklungspfad.", roadmap_text:"Das Projekt entwickelt sich von der Standortanalyse über einen Software-Prototyp bis hin zur Pilotvalidierung und skalierbaren Markteinführung.", phase_1:"Phase 1", phase_1_title:"Analyse", phase_1_text:"Aufbau der Datengrundlage: Lastprofile, Erzeugungsprofile, Marktannahmen und erste Szenarien.", phase_2:"Phase 2", phase_2_title:"MVP", phase_2_text:"Erstellung eines Software-Prototyps mit Optimierungslogik und reproduzierbarer Standortbewertung.", phase_3:"Phase 3", phase_3_title:"Pilotfall", phase_3_text:"Validierung des Ansatzes mit Ingolstadt Village als illustrativem Referenzfall.", phase_4:"Phase 4", phase_4_title:"Markteintritt", phase_4_text:"Gewinnung erster Pilotkunden durch Beratung, Machbarkeitsstudien und Partnernetzwerke.", phase_5:"Phase 5", phase_5_title:"SaaS-Skalierung", phase_5_text:"Standardisierung der Analyse-Module für Multi-Site-Kunden und wiederkehrende Softwareerlöse.",
+        calc_title:"Interaktiver Standort-Quick-Check.", calc_text:"Dieser vereinfachte Rechner ist als Lead-Magnet gedacht. Er liefert eine erste grobe Einschätzung und motiviert zu einer echten Machbarkeitsstudie.", calc_form_title:"Beispielhafte Standortdaten eingeben", calc_label_area:"Verfügbare PV-Fläche in m²", calc_label_demand:"Jährlicher Strombedarf in MWh", calc_label_price:"Strompreis in €/kWh", calc_button:"Potenzial grob berechnen", calc_results_title:"Geschätzter Quick-Check-Output", result_1:"Ca. PV-Leistung", result_2:"Ca. jährliche PV-Erzeugung", result_3:"Indikativer Eigenverbrauchswert", result_5:"Theoretisches H₂-Potenzial aus Überschuss", result_4:"Empfohlener nächster Schritt", calc_note:"Nur als Demo-Annahme: 1 kWp pro 5 m², 1.050 kWh/kWp Jahresertrag, 70 % direkter/nutzbarer Wert vor detaillierter stündlicher Optimierung und 47 kWh/kg H₂ für theoretische Überschussumwandlung.",
+        team_eyebrow:"Teamstruktur", team_title:"Interdisziplinär aufgebaut.", team_text:"Das Perpetua-Projektteam besteht aus 13 Studierenden des Studiengangs Wasserstofftechnologie und -wirtschaft. Das Team verbindet Technologie, Wirtschaft und digitale Umsetzung.", team_1_title:"Projektleitung", team_1_text:"Koordination, Zeitplan, Integration und finale Empfehlung.", team_2_title:"Software / Systemarchitektur", team_2_text:"Tool-Struktur, Optimierungslogik und digitaler Workflow.", team_3_title:"Strategie, Finance & Marketing", team_3_text:"Geschäftsmodell, Marktposition, Investorennutzen und Pitch-Narrativ.", team_4_title:"Technikgruppe", team_4_text:"PV, Speicher, Elektrolyse, Wasserstoffpfade und Standortauslegung.", contact_title:"Bereit, Ihren Standort in einen Clean-Energy-Business-Case zu verwandeln?", contact_text:"Perpetua hilft Gewerbe- und Industriekunden dabei, aus Unsicherheit eine klare, vergleichbare und investorenfähige Energieentscheidung zu machen.", contact_btn_1:"Perpetua per E-Mail kontaktieren", contact_btn_2:"Mit Quick-Check starten", form_name:"Ihr Name", form_email:"Ihre E-Mail", form_message:"Erzählen Sie uns mehr über Ihren Standort, Ihr Unternehmen, Ihr Investitionsinteresse oder Ihre Partnerschaftsidee", form_button:"E-Mail vorbereiten", footer_text:"© 2026 Perpetua · Clean Energy Decision Intelligence · Start-up-Projekt SS2026"
+      }
+    };
+
+    const componentInfo = {
+      en: {
+        pv: ["Solar PV", "Perpetua evaluates PV using area potential, hourly generation, self-consumption, CAPEX logic and its impact on electricity cost reduction."],
+        wind: ["Wind / PPA", "Wind or PPA supply can complement solar generation. Perpetua compares profiles, cost assumptions and value contribution to the site."],
+        electrolyzer: ["Electrolyzer", "Hydrogen production is only recommended when surplus power, LCOH, offtake and system value are attractive after direct use and storage."],
+        battery: ["Battery storage", "Battery storage increases self-consumption, shifts electricity to higher-value hours and reduces exposure to volatile market prices."],
+        fuelcell: ["Fuel cell", "Fuel cells can create additional resilience, backup power or future use-case value as part of a broader site strategy."],
+        tank: ["H₂ tanks", "Hydrogen storage supports offtake flexibility and future H₂ pathways. Perpetua assesses storage sizing, practicality and bankability."]
+      },
+      de: {
+        pv: ["Solar-PV", "Perpetua bewertet PV anhand von Flächenpotenzial, stündlicher Erzeugung, Eigenverbrauch, CAPEX-Logik und dem Beitrag zur Stromkostenreduktion."],
+        wind: ["Wind / PPA", "Wind oder PPA-Strom kann die Solarerzeugung ergänzen. Perpetua vergleicht Profile, Kostenannahmen und den Wertbeitrag für den Standort."],
+        electrolyzer: ["Elektrolyseur", "Wasserstoffproduktion wird erst empfohlen, wenn Überschüsse, LCOH, Abnahme und Systemwert nach Direktnutzung und Speicherung attraktiv sind."],
+        battery: ["Batteriespeicher", "Batteriespeicher erhöhen den Eigenverbrauch, verschieben Strom in wertvollere Stunden und reduzieren die Abhängigkeit von volatilen Marktpreisen."],
+        fuelcell: ["Brennstoffzelle", "Brennstoffzellen können zusätzliche Resilienz, Backup-Strom oder künftige Anwendungswerte im Rahmen der Standortstrategie schaffen."],
+        tank: ["H₂-Tanks", "Wasserstoffspeicher unterstützen Abnahmeflexibilität und künftige H₂-Pfade. Perpetua bewertet Speichergröße, Praxistauglichkeit und Bankability."]
+      }
+    };
+
+    let currentLang = localStorage.getItem("perpetuaLang") || "en";
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem("perpetuaLang", lang);
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(el => { const key = el.dataset.i18n; if (translations[lang][key]) el.textContent = translations[lang][key]; });
+      document.querySelectorAll("[data-i18n-html]").forEach(el => { const key = el.dataset.i18nHtml; if (translations[lang][key]) el.innerHTML = translations[lang][key]; });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => { const key = el.dataset.i18nPlaceholder; if (translations[lang][key]) el.placeholder = translations[lang][key]; });
+      document.getElementById("btnEN").classList.toggle("active", lang === "en");
+      document.getElementById("btnDE").classList.toggle("active", lang === "de");
+      document.getElementById("componentTitle").textContent = translations[lang].default_info_title;
+      document.getElementById("componentText").textContent = translations[lang].default_info_text;
+      document.querySelectorAll(".node").forEach(n => n.classList.remove("active"));
+      calculatePotential();
+    }
+
+    document.getElementById("btnEN").addEventListener("click", () => applyLanguage("en"));
+    document.getElementById("btnDE").addEventListener("click", () => applyLanguage("de"));
+
+    const themeToggle = document.getElementById("themeToggle");
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("perpetuaTheme", theme);
+      themeToggle.textContent = theme === "dark" ? "☾" : "☀";
+    }
+    themeToggle.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
+    setTheme(localStorage.getItem("perpetuaTheme") || "dark");
+
+    document.querySelectorAll(".node").forEach(node => {
+      node.addEventListener("click", () => {
+        document.querySelectorAll(".node").forEach(n => n.classList.remove("active"));
+        node.classList.add("active");
+        const info = componentInfo[currentLang][node.dataset.node];
+        document.getElementById("componentTitle").textContent = info[0];
+        document.getElementById("componentText").textContent = info[1];
+      });
+    });
+
+    document.querySelectorAll(".tab-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
+        button.classList.add("active");
+        document.getElementById(button.dataset.tab).classList.add("active");
+      });
+    });
+
+    document.querySelectorAll(".tilt-card").forEach(card => {
+      card.addEventListener("mousemove", event => {
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const rotateY = ((x / rect.width) - .5) * 9;
+        const rotateX = ((.5 - y / rect.height)) * 9;
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      card.addEventListener("mouseleave", () => card.style.transform = "");
+    });
+
+    const stageShell = document.getElementById("stageShell");
+    stageShell.addEventListener("mousemove", event => {
+      if (window.innerWidth < 621) return;
+      const rect = stageShell.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const rotateY = ((x / rect.width) - .5) * 8 - 12;
+      const rotateX = ((.5 - y / rect.height)) * 8 + 7;
+      stageShell.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    stageShell.addEventListener("mouseleave", () => { stageShell.style.transform = window.innerWidth < 621 ? "none" : "rotateX(7deg) rotateY(-12deg)"; });
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("show"); }), { threshold: .14 });
+    revealEls.forEach(el => observer.observe(el));
+
+    function calculatePotential() {
+      const area = Number(document.getElementById("area").value || 0);
+      const demand = Number(document.getElementById("demand").value || 0);
+      const price = Number(document.getElementById("price").value || 0);
+      const pvCapacityKwp = area / 5;
+      const pvGenerationMwh = pvCapacityKwp * 1050 / 1000;
+      const usefulMwh = Math.min(pvGenerationMwh * .7, demand);
+      const surplusMwh = Math.max(0, pvGenerationMwh - usefulMwh);
+      const annualValue = usefulMwh * 1000 * price;
+      const h2Kg = surplusMwh * 1000 / 47;
+      document.getElementById("pvCap").textContent = `${pvCapacityKwp.toLocaleString(undefined, {maximumFractionDigits:0})} kWp`;
+      document.getElementById("pvGen").textContent = `${pvGenerationMwh.toLocaleString(undefined, {maximumFractionDigits:0})} MWh/year`;
+      document.getElementById("value").textContent = `€${annualValue.toLocaleString(undefined, {maximumFractionDigits:0})}/year`;
+      document.getElementById("h2Potential").textContent = `${h2Kg.toLocaleString(undefined, {maximumFractionDigits:0})} kg H₂/year`;
+      let nextText;
+      if (currentLang === "en") {
+        if (pvGenerationMwh > demand * 1.15) nextText = "Check battery + H₂ pathway";
+        else if (pvGenerationMwh > demand * .45) nextText = "Optimize self-consumption + battery";
+        else nextText = "Assess PV expansion / PPA option";
+      } else {
+        if (pvGenerationMwh > demand * 1.15) nextText = "Batterie + H₂-Pfad prüfen";
+        else if (pvGenerationMwh > demand * .45) nextText = "Eigenverbrauch + Batterie optimieren";
+        else nextText = "PV-Ausbau / PPA-Option prüfen";
+      }
+      document.getElementById("nextStep").textContent = nextText;
+    }
+    ["area", "demand", "price"].forEach(id => document.getElementById(id).addEventListener("input", calculatePotential));
+
+    function prepareEmail(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const subject = currentLang === "en" ? encodeURIComponent("Perpetua inquiry - clean energy optimization") : encodeURIComponent("Perpetua Anfrage - Clean-Energy-Optimierung");
+      const body = encodeURIComponent(`Name: ${name}
+Email: ${email}
+
+Message:
+${message}`);
+      window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
+    }
+
+    function updateProgressBar() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      document.getElementById("progressBar").style.width = `${progress}%`;
+    }
+    window.addEventListener("scroll", updateProgressBar);
+    window.addEventListener("resize", updateProgressBar);
+
+    const canvas = document.getElementById("particleCanvas");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    function resizeCanvas() {
+      canvas.width = window.innerWidth * window.devicePixelRatio;
+      canvas.height = window.innerHeight * window.devicePixelRatio;
+      ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+      particles = Array.from({ length: Math.min(75, Math.floor(window.innerWidth / 18)) }, () => ({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        vx: (Math.random() - .5) * .35,
+        vy: (Math.random() - .5) * .35,
+        r: Math.random() * 1.9 + .6
+      }));
+    }
+    function drawParticles() {
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      const color = getComputedStyle(document.documentElement).getPropertyValue("--green").trim() || "#23f2b4";
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      particles.forEach((p, i) => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > window.innerWidth) p.vx *= -1;
+        if (p.y < 0 || p.y > window.innerHeight) p.vy *= -1;
+        ctx.globalAlpha = .45;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+        for (let j = i + 1; j < particles.length; j++) {
+          const q = particles[j];
+          const dx = p.x - q.x, dy = p.y - q.y;
+          const d = Math.sqrt(dx*dx + dy*dy);
+          if (d < 120) { ctx.globalAlpha = (120 - d) / 680; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
+        }
+      });
+      requestAnimationFrame(drawParticles);
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas(); drawParticles();
+
+    applyLanguage(currentLang);
+    calculatePotential();
+    updateProgressBar();
+  </script>
+</body>
+</html>
